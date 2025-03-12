@@ -3,17 +3,20 @@ package ru.netology.test;
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.netology.data.SQLHelper;
 import ru.netology.page.PaymentPage;
 
 import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.open;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class tourPurchaseTest {
 
     @BeforeEach
     void setUp() {
         open("http://localhost:8080/");
+        SQLHelper.clearDatabase();
     }
 
     @Test
@@ -29,6 +32,8 @@ public class tourPurchaseTest {
         paymentPage.clickContinue();
         paymentPage.successNotification().shouldBe(Condition.visible, Duration.ofSeconds(10))
                 .shouldHave(Condition.text("Операция одобрена Банком"));
+
+        assertEquals("APPROVED", SQLHelper.getPaymentStatus());
     }
 
     @Test
