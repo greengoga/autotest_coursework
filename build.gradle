@@ -25,9 +25,9 @@ repositories {
 
 dependencies {
     testImplementation 'io.qameta.allure:allure-selenide:2.22.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
     testImplementation 'com.codeborne:selenide:6.17.2'
-    implementation 'mysql:mysql-connector-java:8.0.34'
+    testImplementation 'mysql:mysql-connector-java:8.0.30'
 }
 
 test {
