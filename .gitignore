@@ -3,6 +3,8 @@ Thumbs.db*
 HELP.md
 .gradle
 build/
+gradle/
+
 
 ### STS ###
 .apt_generated
@@ -44,4 +46,3 @@ out/
 !**/src/main/**
 !**/src/test/**
 !/aqa-shop.jar
-!/Users/oleggogol/IdeaProjects/autotest_coursework/build/reports/allure-report/allureReport/index.html
