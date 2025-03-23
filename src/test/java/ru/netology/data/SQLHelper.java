@@ -6,9 +6,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class SQLHelper {
-    private static final String URL = System.getProperty("db.url", "jdbc:mysql://localhost:3306/app");
-    private static final String USER = System.getProperty("db.user", "root");
-    private static final String PASSWORD = System.getProperty("db.password", "password");
+    private static final String URL = System.getProperty("db.url");
+    private static final String USER = System.getProperty("db.user");
+    private static final String PASSWORD = System.getProperty("db.password");
 
     static {
         try {
